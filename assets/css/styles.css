@@ -1,17 +1,28 @@
 * {
-    margin: 5px;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
     background-blend-mode: soft-light;
 }
 
 /* -------------------------------- DESKTOP CONFIGURATION --------------------------------*/
+.content {
+    background: url('https://ist-solace.main.ad.rit.edu/~ggm7921/140/project3/assets/imgs/background.png');
+    background-position: center;
+
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+body {
+    background-color: #efa04361;
+}
+
 /* Navigation */
 .navigation {
-    width: 98%;
-    margin-top: -75px;
+    width: 100%;
     padding: 0px;
     background-color: #EFA043;
-
     position: fixed;
     z-index: 0;
 }
@@ -49,17 +60,29 @@ nav {
 
 /* ALL HEADERS */
 .header {
-    margin-top: 100px;
     text-align: center;
-    background: #E6750C;
 
+    background: #E6750C;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
+
+/* Overview Content */
+.overview-content section img {
+    float: right;
+}
+
+.overview-content section a {
+    margin: 0;
+}
 
 h1 {
     font-family: 'Arial Narrow', Arial, sans-serif, 'Times New Roman', Times, serif;
     font-weight: 600;
     font-size: 72px;
+
+
 }
 
 h2 {
@@ -72,4 +95,20 @@ h3 {
 
 h4 {
     margin-left: 15px;
+}
+
+p {
+
+}
+
+img {
+
+}
+
+iframe {
+
+}
+
+a {
+
 }
