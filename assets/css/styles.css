@@ -7,9 +7,8 @@
 /* -------------------------------- DESKTOP CONFIGURATION --------------------------------*/
 /* Navigation */
 .navigation {
-    margin: 0px;
-    margin-top: -100px;
-    margin-left: 30px;
+    width: 98%;
+    margin-top: -75px;
     padding: 0px;
     background-color: #EFA043;
 
@@ -19,8 +18,9 @@
 
 /* Unordered list */
 .navigation ul {
-    margin: 0;
-    padding: 0;
+    margin: auto;
+    padding: 2px;
+    max-width: max-content;
     list-style: none;
 }
 
@@ -40,13 +40,11 @@
 nav {
     padding: 4px;
     font-family: 'Arial Narrow', Arial, sans-serif, 'Times New Roman', Times, serif;
-    font-size: 48px;
+    font-size: 38px;
 
     display: flex;
     justify-content: center;
     align-items: stretch;
-
-    max-width: max-content;
 }
 
 /* ALL HEADERS */
@@ -61,6 +59,7 @@ nav {
 h1 {
     font-family: 'Arial Narrow', Arial, sans-serif, 'Times New Roman', Times, serif;
     font-weight: 600;
+    font-size: 72px;
 }
 
 h2 {
