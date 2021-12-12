@@ -468,4 +468,104 @@ a:hover {
         float: none;
     }
 
+} /* End of Tablet Design */
+
+/*----------------------------- MINI TABLET DESIGN -----------------------------*/
+@media only screen and (max-width: 1150px) {
+    .content {
+        background: url('https://ist-solace.main.ad.rit.edu/~ggm7921/140/project3/assets/imgs/background.png');
+        background-position: center;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .navigation li a {
+        text-decoration: none;
+        margin: 40px;
+    }
+
+
+    /* Navigation Links */
+    nav {
+        padding: 4px;
+        font-family: 'Arial Narrow', Arial, sans-serif, 'Times New Roman', Times, serif;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    /* ALL HEADERS */
+    .header {
+        text-align: center;
+        background: #E6750C;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    /* Project 1 Text */
+    .text1 p {
+        margin-right: 10px;
+        padding: 10px;
+        margin-top: 0px;
+    }
+
+    .image1 {
+        grid-area: a;
+        float: none;
+        padding: 15px;
+        margin-left: 100px;
+    }
+
+    /* Project 2 */
+    .text2 {
+        text-align: center;
+    }
+
+    .text2 p {
+        text-align: left;
+    }
+
+    .text2 img {
+        grid-area: b;
+        float: none;
+        text-align: center;
+        padding: 7px;
+
+        width: 550px;
+        height: 300px;
+    }
+
+    .text4 img {
+        grid-area: e;
+        float: none;
+        padding: 20px;
+    }
+
+    /* Github Section */
+    .GitHub {
+        width: auto;
+        margin: 2px;
+        padding: 5px;
+        display: grid;
+        grid-template-areas:
+            "a a"
+            "e c";
+        align-items: start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 150px;
+        margin-left: 50px;
+    }
+
+    .GitHub img {
+        grid-area: c;
+        margin-bottom: 50px;
+        margin-left: 50px;
+        float: none;
+
+        width: 600px;
+        height: 300px;
+    }
 }
