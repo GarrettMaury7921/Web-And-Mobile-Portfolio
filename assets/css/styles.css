@@ -113,11 +113,13 @@ nav {
 .text1 p {
     margin-right: 150px;
     margin-top: 50px;
+    padding: 10px;
 }
 
 .image1 {
     grid-area: a;
     float: left;
+    padding: 20px;
 }
 
 .images h4 {
@@ -166,6 +168,7 @@ nav {
 .text2 img {
     grid-area: b;
     float: right;
+    padding: 10px;
 }
 
 .text3 {
@@ -175,6 +178,7 @@ nav {
 .text3 img {
     grid-area: c;
     float: left;
+    padding: 20px;
 }
 
 .text4 {
@@ -184,6 +188,7 @@ nav {
 .text4 img {
     grid-area: e;
     float: left;
+    padding: 20px;
 }
 
 .iframevid {
@@ -200,7 +205,7 @@ nav {
     display: grid;
     grid-template-areas:
         "a a"
-        "c d"
+        "c c"
         "e e"
         "f f";
     align-items: start;
@@ -215,7 +220,51 @@ nav {
 }
 
 .projects3 p {
+    grid-area: c;
     text-align: left;
+}
+
+/* Github section */
+.GitHub {
+    width: auto;
+    margin: 2px;
+    padding: 5px;
+    display: grid;
+    grid-template-areas:
+        "a a"
+        "e c";
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 150px;
+}
+
+.GitHub h2 {
+    grid-area: a;
+    text-align: center;
+}
+
+.GitHub img {
+    grid-area: c;
+    margin-bottom: 50px;
+    float: right;
+}
+
+.GitHub a {
+    grid-area: e;
+    line-height: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+}
+
+/* References Section */
+.References {
+    margin-top: 200px;
+}
+
+.References h2 {
+    text-align: center;
 }
 
 /* Regular Headers and Paragraphs */
@@ -258,7 +307,7 @@ p {
 
     line-height: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 img {
