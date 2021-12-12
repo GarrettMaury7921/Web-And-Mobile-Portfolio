@@ -470,6 +470,8 @@ a:hover {
 
 } /* End of Tablet Design */
 
+
+
 /*----------------------------- MINI TABLET DESIGN -----------------------------*/
 @media only screen and (max-width: 1150px) {
     .content {
@@ -489,7 +491,7 @@ a:hover {
     nav {
         padding: 4px;
         font-family: 'Arial Narrow', Arial, sans-serif, 'Times New Roman', Times, serif;
-        font-size: 30px;
+        font-size: 25px;
         display: flex;
         justify-content: center;
         align-items: stretch;
@@ -567,5 +569,227 @@ a:hover {
 
         width: 600px;
         height: 300px;
+    }
+} /* Mini Tablet DESIGN */
+
+
+/*----------------------------- PHONE DESIGN -----------------------------*/
+@media only screen and (max-width: 800px) {
+    
+    .content {
+        background: url('https://ist-solace.main.ad.rit.edu/~ggm7921/140/project3/assets/imgs/background.png');
+        background-position: center;
+        margin-left: unset;
+        margin-right: unset;
+    }
+
+    .navigation li a {
+        text-decoration: none;
+        margin: 2px;
+    }
+
+
+    /* Navigation Links */
+    nav {
+        padding: 4px;
+        font-family: 'Arial Narrow', Arial, sans-serif, 'Times New Roman', Times, serif;
+        font-size: 17px;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    /* ALL HEADERS */
+    .header {
+        text-align: center;
+        background: #E6750C;
+        margin-left: unset;
+        margin-right: unset;
+    }
+
+    /* Overview Content */
+    .overview-content {
+        margin: 10px;
+        padding: 3px;
+        text-align: center;
+    }
+
+    .overview-content p {
+        text-align: left;
+    }
+
+    .overview-content section img {
+        float: none;
+
+        width: 200px;
+        height: 250px;
+    }
+
+    .overview-content section a {
+        margin: 3px;
+        padding: 1px;
+    }
+
+    /* Project 1 */
+    .text1 p {
+        margin-right: 10px;
+        padding: 10px;
+        margin-top: 0px;
+    }
+
+    .projects1 img {
+        width: 400px;
+        height: 350px;
+    }
+
+    .image1 {
+        grid-area: a;
+        float: none;
+        padding: 15px;
+        margin-left: 0px;
+    }
+
+    .images img {
+        width: 90px;
+        height: 90px;
+    }
+
+    /* Project 2 */
+    .text2 {
+        text-align: center;
+    }
+
+    .text2 p {
+        text-align: left;
+    }
+
+    .text2 img {
+        grid-area: b;
+        float: none;
+        text-align: center;
+        padding: 7px;
+        width: 450px;
+        height: 275px;
+    }
+
+    .text3 {
+        text-align: center;
+    }
+
+    .text3 p {
+        text-align: left;
+    }
+
+    .text3 img {
+        width: 300px;
+        height: 200px;
+
+        float: unset;
+    }
+
+    .text4 img {
+        grid-area: e;
+        float: none;
+        padding: 10px;
+
+        width: 450px;
+        height: 280px;
+    }
+
+    iframe {
+        width: 300px;
+        height: 250px;
+    }
+
+    /* Project 3 */
+    .projects3 img {
+        width: 400px;
+        height: 200px;
+    }
+
+    /* Github Section */
+    .GitHub {
+        width: auto;
+        margin: 2px;
+        padding: 4px;
+        display: grid;
+        grid-template-areas:
+            "a a"
+            "e c";
+        align-items: start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 100px;
+    }
+
+    .GitHub img {
+        grid-area: c;
+        margin-bottom: 50px;
+        margin-left: 40px;
+        float: none;
+        width: 350px;
+        height: 200px;
+    }
+
+    .GitHub a {
+        grid-area: e;
+        line-height: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+    }
+
+    /* Regular Headers and Paragraphs */
+    h1 {
+        font-family: 'Arial Narrow', Arial, sans-serif, 'Times New Roman', Times, serif;
+        font-weight: 600;
+        font-size: 40px;
+    }
+
+    h2 {
+        margin: 5px;
+        padding: 5px;
+        line-height: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 28px;
+    }
+
+    h3 {
+        margin: 5px;
+        padding: 5px;
+        line-height: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+    }
+
+    h4 {
+        margin: 5px;
+        padding: 5px;
+        line-height: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+    }
+
+    p {
+        margin: 5px;
+        padding: 5px;
+        line-height: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 15px;
+    }
+
+    img {
+        margin: 3px;
+        padding: 3px;
+    }
+
+    iframe {
+        margin: 3px;
+        padding: 3px;
+    }
+
+    a {
+        margin: 3px;
+        padding: 3px;
     }
 }
