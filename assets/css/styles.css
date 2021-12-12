@@ -132,7 +132,7 @@ nav {
 .images {
     grid-area: c;
     text-align: center;
-    margin-top: 180px;
+    margin-top: 220px;
     white-space: nowrap;
 }
 
@@ -575,7 +575,7 @@ a:hover {
 
 /*----------------------------- PHONE DESIGN -----------------------------*/
 @media only screen and (max-width: 800px) {
-    
+
     .content {
         background: url('https://ist-solace.main.ad.rit.edu/~ggm7921/140/project3/assets/imgs/background.png');
         background-position: center;
@@ -637,9 +637,13 @@ a:hover {
         margin-top: 0px;
     }
 
+    .projects1 {
+        margin-left: 25px;
+    }
+
     .projects1 img {
-        width: 400px;
-        height: 350px;
+        width: 375px;
+        height: 340px;
     }
 
     .image1 {
@@ -650,8 +654,8 @@ a:hover {
     }
 
     .images img {
-        width: 90px;
-        height: 90px;
+        width: 120px;
+        height: 120px;
     }
 
     /* Project 2 */
@@ -668,8 +672,8 @@ a:hover {
         float: none;
         text-align: center;
         padding: 7px;
-        width: 450px;
-        height: 275px;
+        width: 350px;
+        height: 250px;
     }
 
     .text3 {
@@ -681,9 +685,8 @@ a:hover {
     }
 
     .text3 img {
-        width: 300px;
-        height: 200px;
-
+        width: 375px;
+        height: 260px;
         float: unset;
     }
 
@@ -691,20 +694,19 @@ a:hover {
         grid-area: e;
         float: none;
         padding: 10px;
-
-        width: 450px;
-        height: 280px;
+        width: 375px;
+        height: 260px;
     }
 
     iframe {
-        width: 300px;
-        height: 250px;
+        width: 375px;
+        height: 260px;
     }
 
     /* Project 3 */
     .projects3 img {
-        width: 400px;
-        height: 200px;
+        width: 375px;
+        height: 190px;
     }
 
     /* Github Section */
@@ -720,16 +722,16 @@ a:hover {
         flex-direction: column;
         justify-content: center;
         gap: 10px;
-        margin-top: 100px;
+        margin-top: 75px;
     }
 
     .GitHub img {
         grid-area: c;
         margin-bottom: 50px;
-        margin-left: 40px;
+        margin-left: 30px;
         float: none;
-        width: 350px;
-        height: 200px;
+        width: 375px;
+        height: 260px;
     }
 
     .GitHub a {
@@ -737,6 +739,20 @@ a:hover {
         line-height: 30px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 20px;
+
+        margin-left: 25px;
+    }
+
+    .GitHub h2 {
+        margin-left: 25px;
+    }
+
+    .GitHub h3 {
+        margin-left: 25px;
+    }
+
+    .GitHub p {
+        margin-left: 25px;
     }
 
     /* Regular Headers and Paragraphs */
