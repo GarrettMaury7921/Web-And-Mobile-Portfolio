@@ -1,0 +1,67 @@
+<!-- Team Project 2 - Group 4 -->
+<!-- Jim Habermas - Web & Mobile 2 -->
+<!-- 12/9/2022 -->
+<!-- resources.html -->
+
+
+<!-- Small content subheader -->
+<h4 class="content-subheader" id="security"> Security </h4><br><br>
+
+<img src="http://solace.ist.rit.edu/~iste240t39/foxfax_mod/assets/images/john.png" width="200" height="200" alt="level 3 user" style="display: block; margin-left: auto; margin-right: auto;"/>
+
+<p class="content">Unix systems are one of the most widely used across the world. One of the most common operating systems for servers is the Linux OS of the Unix family. 
+    Because of this, hackers know how to hack into this specific OS better than others. Therefore, it is important to make sure that you take some precautions with your Linux device. 
+    There are some very common security vulnerabilities that can be fixed with a little bit of Linux knowledge. First is to close any unnecessary ports. 
+    These ports can be taken advantage of if they are managed poorly, so, it is best to just shut down any ports if you know that you will never use them.
+    <br><br>To get an active list of your ports use the command: <code>netstat -tulp</code>
+    <br><br>
+    You should also scan your machine to learn what ports are in listening mode. These ports are extra vulnerable as they are waiting for a connection with the outside world.
+    <br><br>To scan for listening ports use the command: <code>nmap -sTU “your host machine”</code>
+    <br><br>Like ports, it is important to manage the services that your have running on your Linux device. These services can be used improperly and can even give an attacker access to your system.
+    <br><br>To list the services running use the command: <code>chkconfig -list | awk</code>
+    <br><br>To stop a service permanently use the command: <code>chkconfig “service name” off</code>
+    <br><br>It is also important to change your password, especially the password for the root account. If you have lots of accounts on your machine it is essential that all these passwords are not 
+    default and are somewhat complex.
+    <br><br>To change your password, use the command: <code>passwd</code>
+</p>
+
+<!-- Small content subheader -->
+<br><br><h4 class="content-subheader" id="unix-overview"> Which Distribution to Pick </h4><br><br>
+<p class="content">Unix is the first operating system in existence, so, there are many different distributions that have come from the Unix technology. These all include MacOS, Ubuntu, Android, 
+    Play Station and even the Windows OS. However, there are some systems that are more like the original technology than others.
+    </p>
+<br><br><img src="assets/images/Distrobutions.jpg" alt="distro" height="255px" width="500px" style="max-width: 100%; max-width: 100%">
+<br><br>
+
+<h4 class="content-subheader" id="file-system-security"> File System Security </h4><br><br>
+<p class="content">Every file on a Unix system has access rights associated with it. Access focuses on three main rights – read, write and execute. 
+    Each of these rights plays an important role in creating a safe and well-organized system. The read right only allows a user to look at the data in a file/folder. 
+    The write right only allows a user to write new data to a file/folder. The execute right only allows a user to run programs in a file/folder. These three rights can be used in combo to provide the level of 
+    access that the administrator decides is appropriate.
+    <br><br>You can view the rights associated with the files in your current directory by using the command: <code>ls -l</code><br><br>
+    </p>
+<img src="assets/images/rights.JPG" alt="rights">
+<p class="caption">The information returned with this command is the rights for three groups. The owner of the system, the group that created the file and everyone else. The 9 characters are the 3 rights held by 
+    these three groups. These settings can be changed upon your desire to let other people access the information on your system.</p>
+<br><br>
+
+<!-- Quiz -->
+<div class="quiz-container">
+    <h6 class="question-logo">?</h6>
+    <h4 class="quiz-header"> Knowledge Quiz </h4>
+    <p class="quiz-question"> How do you display the file permissions for items in the current directory? </p>
+
+    <input class="quiz-answer" type="radio" id="ls" name="q" value="ls" onclick="selectAnswer(false, 'ls lists files.')" />
+    <label class="quiz-answer-label" for="ls">ls</label><br />
+
+    <input class="quiz-answer" type="radio" name="q" value="cat" onclick="selectAnswer(false, 'cat concatenates files and print their content.')" />
+    <label class="quiz-answer-label" for="cat">cat</label><br />
+
+    <input class="quiz-answer" type="radio" name="q" value="pwd" onclick="selectAnswer(true, 'ls -l will list with permissions')" />
+    <label class="quiz-answer-label" for="pwd">ls -l</label><br />
+
+    <input class="quiz-answer" type="radio" name="q" value="dcd" onclick="selectAnswer(false, 'hhh is not a real command.')" />
+    <label class="quiz-answer-label" for="dcd">hhh</label><br />
+
+    <p id="answer-response"> </p>
+</div>

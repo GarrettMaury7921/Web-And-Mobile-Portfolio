@@ -1,0 +1,82 @@
+<!-- Team Project 2 - Group 4 -->
+<!-- Jim Habermas - Web & Mobile 2 -->
+<!-- 12/9/2022 -->
+<!-- resources.html -->
+
+
+<img src="http://solace.ist.rit.edu/~iste240t39/foxfax_mod/assets/images/Serena.png" width="200" height="200" alt="level 2 user" style="display: block; margin-left: auto; margin-right: auto;"/>
+
+<!-- Small content subheader -->
+<h4 class="content-subheader" id="secure-shell"> Secure Shell </h4>
+
+<p class="content centers">The secure shell is an important protocol that allows computers to communicate with each other. This protocol is not unique to Unix systems but its is still important to know. 
+    This is because some of the Unix distributions do not have a user interface so its not easy to figure out how to make a remote connection. The SSH protocol allows a user to make a secured connection
+     to another computer. This protocol uses a system called public key authentication to ensure that messages sent over SSH cannot be read by other people. This is really important because you don’t want to 
+     have your messages stolen or used on your computer without your permission.
+    <br><br>To log onto another computer using SSH, all you need to know is the hostname of your computer, a username on that computer and the password for that account. 
+    This makes it easy to control multiple computers from only one of your Unix computers. Therefore every Unix distribution comes with ssh already installed. 
+    Using this command you can perform uploads, use tools and services, and run programs.
+    </p>
+    
+
+
+<!-- Small content subheader -->
+<h4 class="content-subheader" id="root-users"> Root Users </h4>
+<p class="content centers">To use a Unix device, you need to sign into an account on that device. That account grants you access to certain resources on the Unix machine. 
+    It also provides your very own area to store your own files and programs. However, there is one user that has more power on the system than all the other users. 
+    This user is called “root”. This is an administrative account on Unix system and has the highest amount of privileges and rights on the system. They are the “kings” of the Unix system. 
+    So even if you have seven accounts on one Unix system, the root user will have access to everyone’s files and programs.
+    <br><br>This account is important to the structure of a Unix device. This is because this one user can set setting on the computer that nobody else can access. 
+    This is important when your computer has many users on it with varying levels of trust. Some people don’t need to alter settings that are essential to the way the computer functions. 
+    They could delete all your files just as a prank! This super user is also important for security reasons. If somebody outside your computer is trying to hack in, its important to make sure that they cant 
+    access the password for the root user. Otherwise, they will be able to control the entire computer. If another user needs temporary access to the root privileges or the root user isn’t signed into the root 
+    account, they can use the “sudo” command. This command allows that user to run any administrator level command that they want if they know the password for the root user.
+    </p>
+
+
+
+<!-- Small content subheader -->
+<h4 class="content-subheader" id="text-editors"> Text Editors </h4>
+<p class="content centers">Text editor are important programs on Unix systems. In other operating systems there are fancy GUI text editors like word and google docs. However, Unix has their own programs. 
+    There are lots of different types of these programs. Some only have text lines and an interface with only text. These can be confusing for first time users but are the most effective text editors 
+    because they are good for simple projects. They allow you to open a document, edit it, and save quickly. However, doing more advanced actions are more difficult on these editors. For more difficult projects 
+    it is useful to use an editor with a graphical interface. You can even download programs that resemble the Word document editor. These programs allow more advanced changes to the document and the text.</p>
+<br><br>
+<p class="content centers" style="font-style: italic">Here are some common text editors:</p>
+<br><br>
+<div class="wrapper">
+
+
+    <p class="content navgrid">This is what the Nano text editor looks like. Some say it is the easiest to use.</p>
+    
+    <p class="content navgrid">To run type: <code>nano “filename”</code></p>
+    
+    <img class="body-img-alt" src="../assets/images/nano.JPG" alt="nano">
+    <p class="content navgrid">This is what the Vi editor looks like. It is like Nano but has a version that works well with ssh.</p>
+    
+    <p class="content navgrid">To run type: <code>vi “filename”</code></p>
+    
+    <img class="body-img-alt" style="grid-row: auto;" src="../assets/images/vim.JPG" alt="vim">
+</div>
+
+
+<!-- Quiz -->
+<div class="quiz-container">
+    <h6 class="question-logo">?</h6>
+    <h4 class="quiz-header"> Knowledge Quiz </h4>
+    <p class="quiz-question"> What is an example of a text editor? </p>
+
+    <input class="quiz-answer" type="radio" id="ls" name="q" value="ls" onclick="selectAnswer(false, 'Windows is an operating system')" />
+    <label class="quiz-answer-label" for="ls">Windows</label><br />
+
+    <input class="quiz-answer" type="radio" name="q" value="cat" onclick="selectAnswer(false, 'PDF is a filetype')" />
+    <label class="quiz-answer-label" for="cat">PDF</label><br />
+
+    <input class="quiz-answer" type="radio" name="q" value="pwd" onclick="selectAnswer(true, 'Yes!')" />
+    <label class="quiz-answer-label" for="pwd">Vi</label><br />
+
+    <input class="quiz-answer" type="radio" name="q" value="dcd" onclick="selectAnswer(true, 'Yes!')" />
+    <label class="quiz-answer-label" for="dcd">nano</label><br />
+
+    <p id="answer-response"> </p>
+</div>

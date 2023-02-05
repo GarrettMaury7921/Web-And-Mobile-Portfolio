@@ -1,0 +1,144 @@
+<!-- Team Project 2 - Group 4 -->
+<!-- Jim Habermas - Web & Mobile 2 -->
+<!-- 12/9/2022 -->
+<!-- resources.html -->
+
+<img src="http://solace.ist.rit.edu/~iste240t39/foxfax_mod/assets/images/Kathy.png" width="200" height="200" alt="level 1 user" style="display: block; margin-left: auto; margin-right: auto;"/>
+
+<p class="content centers">
+    There are some fundamental parts that are the same for all Unix based computers.
+</p>
+
+<div class="wrapper">
+    <!-- Small content header -->
+    <br><br>
+    <h3 class="content-small-header"> The Kernel </h3><br>
+
+    <!-- Content -->
+    <p class="content">
+        The kernel is one of the hardest parts of Unix to understand. So don’t worry! However, it is important to pay
+        attention because the kernel is the main part of the operating system that does most of the work.
+        This is because the kernel is the boss of the computer. It organizes all the activities that the computer does
+        and makes sure that there is time and space allotted for everything to get done.
+        It does this through handing out computer memory for the programs to use and store anything they want to save.
+        It also handles all the saved files on the computer and can bring them up when your computer
+        asks for them. Whenever you run a program, make a file or remove a file the kernel is the boss that gets the job
+        done.
+    </p>
+
+    <!-- Image -->
+    <div class="body-img">
+        <img src="../assets/images/kernel_1.png" alt="kernel">
+        <p class="caption">*This diagram helps to visualize the job that the kernel does. It’s the boundary between the
+            machines that make the computer run (CPU, Memory, Devices) and the programs that use the computer
+            to do cool stuff. So if you want to use one of your favorite videogames on a Unix system, that videogame
+            will use the kernel to ask for all the parts of the computer that it needs to make the game work!</p>
+    </div>
+</div>
+
+<div class="wrapper">
+    <!-- Small content header -->
+    <br><br>
+    <h3 class="content-small-header"> The Shell </h3><br>
+
+    <!-- Content -->
+    <p class="content">The shell is also a very important part of the Unix system. It is the interface between the
+        person using the computer and the kernel described above.
+        That’s because the shell takes the commands that the person using the computer writes and gives them to the
+        kernel to make them happen. This is because the shell is a command line interpreter.
+        Its job is to take in the commands and then help the kernel make sense of them. It would be very difficult
+        to
+        talk to the kernel directly because it uses a very strange language to carry out its work.
+        Thankfully, the shell can take human words and translate them so that the kernel can understand what we
+        want.
+    </p>
+
+    <!-- Image -->
+    <br>
+    <div class="body-img">
+        <img src="../assets/images/shell_1.png" alt="shell">
+        <p class="caption">*This is an example of three different types of Unix operating systems and their shells. As
+            you can see, the shell is just a line of words on a black screen. It waits for you to type in a command then
+            it uses the kernel to do what the command says.</p>
+    </div>
+</div>
+
+<h4 class="content-subheader" id="file-system"> File System </h4>
+
+<div class="wrapper">
+    <!-- Small content subheader -->
+    <p class="content">The Unix system uses a strict file system to keep everything organized on the computer. Much like
+        a file cabinet, any time you want to save some information, you label your papers and folders and save them in
+        an organized manner. This makes it super easy to find all the information you need later on. Similarly, the Unix
+        file system follows the same method. It has specific folders that come with the same information in it every
+        time you download Unix and use it on your computer. These files, and the data inside them, have all the things
+        the operating system needs to run properly. Because of this, the files are in the same spot every time. If you
+        ever moved one of these files, your computer might not work how its supposed to. But, the filesystem is the
+        place for you to save all the stuff that you might be working on for school or save your progress in a game your
+        playing. You can make your own folder to save your information. Or you can make multiple folders to keep a more
+        organized structure.</p>
+    <br>
+    <div class="body-img">
+        <img src="../assets/images/File_1.png" alt="file">
+        <p class="caption">*This is what the file structure looks like. The squares in the green box are all the
+            important
+            folders that the operating system comes with when you download it. You can make your own folders like what
+            is
+            shown in the blue box.</p>
+    </div>
+</div>
+
+
+<!-- Small content subheader -->
+<h4 class="content-subheader" id="navigation"> Navigation </h4>
+
+
+<div class="wrapper-alt">
+    <p class="content navgrid" style="grid-column: 1 / span 5; text-align: center;">It is important to know how to use
+        the shell to navigate through the file system we just
+        learned about. In most computers you can click on the folder you want to use and click on the
+        files inside of it. But in Unix, sometimes it is better to write commands into the shell rather than
+        clicking on the screen. 
+        <br><br>
+        <p class ="content" style="font-style: italic; grid-column: 1 / span 5; text-align: center;">Here are some commands that you can use:</p></p>
+
+    <p class="content navgrid"><code>ls</code>This command is used to show all the files/folders in the folder
+        you’re using.</p>
+
+    <img class="navgrid-img" src="../assets/images/ls.png" alt="ls">
+
+    <p class="content navgrid"><code>pwd</code>This command is used to show the path to get to the folder that
+        you’re using. The path is the folders that you must go through to find the folder
+        that you’re currently in.</p>
+
+    <img class="navgrid-img" src="../assets/images/pwd.png" alt="pwd">
+    <p class="content navgrid"><code>cd</code>This command is used to change from the current folder into
+        another one. If you want to leave the folder that your in you just use the command “cd ..”</p>
+
+    <img class="navgrid-img" src="../assets/images/cd.png" alt="cd">
+</div>
+
+<!-- Quiz -->
+<div class="quiz-container">
+    <h6 class="question-logo">?</h6>
+    <h4 class="quiz-header"> Knowledge Quiz </h4>
+    <p class="quiz-question"> How do you display the current working directory? </p>
+
+    <input class="quiz-answer" type="radio" id="ls" name="q" value="ls"
+        onclick="selectAnswer(false, 'ls lists files.')" />
+    <label class="quiz-answer-label" for="ls">ls</label><br />
+
+    <input class="quiz-answer" type="radio" name="q" value="cat"
+        onclick="selectAnswer(false, 'cat concatenates files and print their content.')" />
+    <label class="quiz-answer-label" for="cat">cat</label><br />
+
+    <input class="quiz-answer" type="radio" name="q" value="pwd"
+        onclick="selectAnswer(true, 'pwd will print the current working directory')" />
+    <label class="quiz-answer-label" for="pwd">pwd</label><br />
+
+    <input class="quiz-answer" type="radio" name="q" value="dcd"
+        onclick="selectAnswer(false, 'dcd is not a real command.')" />
+    <label class="quiz-answer-label" for="dcd">dcd</label><br />
+
+    <p id="answer-response"> </p>
+</div>
