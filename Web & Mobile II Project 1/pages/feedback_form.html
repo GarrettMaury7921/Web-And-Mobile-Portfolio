@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Garrett Maury, ISTE-240-->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8" />
+	<title>Feedback Form for Old Ellicott City</title>
+    
+	<!-- Stylesheet -->
+   <link rel="stylesheet" type="text/css" href="https://people.rit.edu/ggm7921/ISTE240/project1/assets/styles.css?v=1">
+
+   <!-- Icon for the webpage -->
+   <link rel="icon" type="image/x-icon" href="https://people.rit.edu/ggm7921/ISTE240/project1/assets/imgs/icon.ico">
+
+	<!-- JS -->
+	<script src="https://people.rit.edu/ggm7921/ISTE240/project1/slideshow.js"></script>
+
+   <!-- SCRIPT That verifies that the all required fields should be filled in -->
+   <script>
+	   function validate() {
+		   "use strict";
+		   var valid = false;
+
+		   var valid1 = true;
+		   var valid2 = true;
+		   var valid3 = true;
+
+		   var currentDate = new Date();
+		   var dd = String(currentDate.getDate()).padStart(2, '0');
+		   var mm = String(currentDate.getMonth() + 1).padStart(2, '0');
+		   var yyyy = currentDate.getFullYear();
+
+		   currentDate = yyyy + '-' + mm + '-' + dd;
+
+		   if (document.getElementById("visitor").value == '') {
+			   document.getElementById("visitor").style.borderColor = "red";
+			   document.getElementById("visitor").style.backgroundColor = 'pink';
+			   valid1 = false;
+		   }
+
+		   if (document.getElementById("groupNum").value == 0 || document.getElementById("groupNum").value < 0) {
+			   document.getElementById("groupNum").style.borderColor = "red";
+			   document.getElementById("groupNum").style.backgroundColor = 'pink';
+			   valid2 = false;
+		   }
+
+		   if (document.getElementById("date").value == '' || document.getElementById("date").value > currentDate) {
+			   document.getElementById("date").style.borderColor = "red";
+			   document.getElementById("date").style.backgroundColor = 'pink';
+			   valid3 = false;
+		   }
+
+		   if (valid1 == true && valid2 == true && valid3 == true) {
+			   valid = true;
+			   document.getElementById("visitor").style = null;
+		   }
+
+		   console.log(document.getElementById("date").value);
+		   console.log(currentDate);
+		   console.log("Are fields okay? " + valid);
+
+		   return (valid);
+	   }
+   </script>
+
+</head>
+
+   <body>
+		<!-- Content -->
+		<div class="content">
+			<!-- Header showing the icon to the left and having a menu in the center, button on the right -->
+			<header>
+				<a href = "https://people.rit.edu/ggm7921/ISTE240/project1/index.html"> 
+					<img class="logo" src="https://people.rit.edu/ggm7921/ISTE240/project1/assets/imgs/city_logo.png" width="350" height="125" alt="A logo from Old Ellicott City." /></a>
+
+				<nav>
+					<!-- Nav Bar -->
+					<ul class="links" id="links">
+						<li><a href="https://people.rit.edu/ggm7921/ISTE240/project1/index.html">Home</a></li>
+						<li><a href="https://people.rit.edu/ggm7921/ISTE240/project1/pages/explore.html">Explore</a></li>
+						<li><a href="https://people.rit.edu/ggm7921/ISTE240/project1/pages/history.html">History</a></li>
+						<li><a href="https://people.rit.edu/ggm7921/ISTE240/project1/pages/flooding.html">Flooding</a></li>
+						<li><a href="https://people.rit.edu/ggm7921/ISTE240/project1/pages/events.html">Events</a></li>
+						<li><a href="https://people.rit.edu/ggm7921/ISTE240/project1/pages/food.html">Food</a></li>
+						<li><a href="https://people.rit.edu/ggm7921/ISTE240/project1/pages/me.html">My Experience</a></li>
+						<li><a href="https://people.rit.edu/ggm7921/ISTE240/project1/pages/feedback_form.html">Feedback</a></li>
+						<li><a href="https://people.rit.edu/ggm7921/ISTE240/project1/pages/sources.html">Sources</a></li>
+					</ul>
+					<!--Toggle Bar for Mobile Menu-->
+					<a href="#" class="toggle" onclick="showMenu()">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</a>
+				</nav>
+					<!-- Special Button For the Rubric Page -->
+					<a class="button" id="button" href="https://people.rit.edu/ggm7921/ISTE240/project1/pages/rubric.html">Rubric</a>
+			</header>
+
+			<div class="main-content">
+				<div class="background-text">
+
+					<!-- Form -->
+					<form action = "process.php" method = "POST"
+					onsubmit="return validate();">
+
+					<img class="pic" src="https://people.rit.edu/ggm7921/ISTE240/project1/assets/imgs/header_pic2.png" width="300" height="200" 
+								alt="A picture of the firehouse museum" />
+					<div class="headingquestion">
+						<h2 class = "underline">
+							Please tell us how you enjoyed Old Ellicott City!
+							<br><br>
+						</h2>
+						<!-- Horizontal Rule Statement -->
+						<hr>
+					</div>
+
+					<!-- Beginning of Top class to group the top half -->
+					<div class="top">
+
+						<div class="enterName">
+							Enter your name
+							<input type ="text" id="visitor" name ="visitor"
+									placeholder="Required Entry" >
+							<span class="astric"> * </span>
+						</div>
+
+
+						<!-- Group number form-->
+						<div class="enterNum">
+							How many people in your group:
+							<input type ="number" id="groupNum" name ="groupNum" placeholder="Required Entry" min ="0" max ="100" step ="1" value ="0" style = "margin-bottom: 20px;" >
+							<span class="astric"> * </span><br />
+						</div>
+
+
+						<!-- Date documenting when they visited -->
+						<div class="enterVisit">
+							When did you visit?
+							<input type = "date" id="date" name = "date" />
+							<span class="astric"> * </span><br />
+							<p id="errorMessage"></p>
+						</div>
+					</div> <!-- End of Top class -->
+
+					<!-- Field Set for favorite place -->
+					<div class="radio">
+						<fieldset>
+							<legend>Favorite Place - Must Select one</legend>
+							<input type="radio" name="fplace" value="Main Street Music Fest" id="fplace"><label for="fplace">Main Street Music Fest</label><br>
+							<input type="radio" name="fplace" value="La Palapa Grill & Cantina" id="fplace6"><label for = "fplace">La Palapa Grill & Cantina</label><br>
+							<input type="radio" name="fplace" value="B&O Ellicott City Station Museum"  id="fplace7" ><label for ="fplace">B&O Ellicott City Station Museum</label><br>
+							<input type="radio" name="fplace" value="Number Nine Trolley Trail"  id="fplace8" ><label for ="fplace">Number Nine Trolley Trail</label><br>
+						</fieldset>
+					</div>
+
+					<!-- Field Set For Places You Have Been -->
+					<div class="checkbox">
+						<fieldset>
+							<legend>Select Those You Enjoyed Going to (If your group did not go, leave the box blank) - Can Select Multiple</legend>
+							<input type="checkbox" name="fplace2" value="Movies at the Wine Bin" id="fplace2"><label for="fplace2">Movies at the Wine Bin</label><br>
+							<input type="checkbox" name="fplace3" value="Thomas Isaac Log Cabin" id="fplace3"><label for = "fplace3">Thomas Isaac Log Cabin</label><br>
+							<input type="checkbox" name="fplace4" value="Axgard (Axe Throwing)"  id="fplace4" ><label for ="fplace4">Axgard (Axe Throwing)</label><br>
+							<input type="checkbox" name="fplace5" value="Clayground Studio and Gallery"  id="fplace5" ><label for ="fplace5">Clayground Studio and Gallery</label><br>
+						</fieldset>
+					</div>
+
+
+					<!-- Scrollbar for town rating -->
+					<br>Please rate Old Ellicott City, MD<br>
+					<p>0
+					<input type="range" name="rating" min="0" max="10" step="1" list="set">
+						<datalist id = "set">
+							<option>0</option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10</option>
+						</datalist>
+					10</p>
+					
+					<br><br>
+					<div class="submit_button">
+						<input type = "submit"  >
+					</div><!-- end of div for submit button -->
+
+					</form> <!-- End of Form -->
+
+				</div> <!-- Background Text Div -->
+
+				<!-- Footer for Validators -->
+				<footer>
+					
+					<h3>
+						<b>-- Individual Midterm Project 1 --</b>
+					</h3>
+					<h3>
+						<b>Course: ISTE240.03 - Web and Mobile II</b>
+					</h3>
+					<h3>
+						<b>Created by Garrett Maury © 2022</b>
+					</h3>
+
+					<!--Validators-->
+					<br >
+					<a href="http://validator.w3.org/check?uri=https://people.rit.edu/ggm7921/ISTE240/project1/pages/feedback_form.html">
+					<img src="https://people.rit.edu/ggm7921/ISTE240/project1/assets/imgs/html_5_logo_transparent.png" width="45" height="59" alt="HTML5" title="HTML5"></a>&nbsp; &nbsp;
+
+					<a href="http://validator.w3.org/check?uri=https://people.rit.edu/ggm7921/ISTE240/project1/assets/styles.css">
+					<img src="https://people.rit.edu/ggm7921/ISTE240/project1/assets/imgs/css3logo.png" width="45" height="59" alt="CSS3" title="CSS3"></a>&nbsp; &nbsp;
+
+				</footer> <!-- end of footer  -->
+			</div>
+		</div> <!-- Content div -->
+
+   </body>
+</html>
